@@ -20,11 +20,11 @@ posts = [
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', posts=posts)
+    return render_template('layout.html', posts=posts)
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('layout.html', title=title)
 
 
 if __name__ == '__main__':
