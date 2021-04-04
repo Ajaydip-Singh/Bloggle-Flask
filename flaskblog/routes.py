@@ -4,27 +4,13 @@ from PIL import Image
 from flask import render_template, url_for, flash, redirect, request
 from flaskblog import app, db, bcrypt
 from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
-from flaskblog.models import User
+from flaskblog.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
-
-posts = [
-    {
-        'author': 'Ajaydip Singh',
-        'title': 'Blog post 1',
-        'content': 'First post content',
-        'date_posted': 'Jan 10 2021'
-    },
-    {
-        'author': 'Harmeet Singh',
-        'title': 'Blog post 2',
-        'content': 'Second post content',
-        'date_posted': 'Jan 11 2021'
-    }
-]
 
 @app.route('/')
 @app.route('/home')
 def home():
+    posts = Post.query.all()
     return render_template('home.html', posts=posts)
 
 @app.route('/about')
@@ -104,6 +90,9 @@ def account():
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
+        post = Post(title=form.title.data, content=form.content.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
         flash('Post created', 'success')
         return redirect(url_for('home'))
 
