@@ -8,7 +8,7 @@ Bloggle is a Flask app that is deployed on heroku [here](https://bloggleapp.hero
 # How to contribute
 
 
-1. Clone the repo to a "local" directory (on your computer).
+1. Clone the forked repo to a "local" directory (on your computer).
 
 ```
 git clone https://github.com/Ajaydip-Singh/Bloggle-Flask.git
