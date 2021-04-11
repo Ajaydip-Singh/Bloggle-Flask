@@ -1,53 +1,35 @@
-# Welcome to BLOGit
+# Welcome to Bloggle
 
-## Setup
+Bloggle is a Flask app that is deployed on heroku [here](https://bloggleapp.herokuapp.com/login). Users can register, login, and create blogs to share with the rest of the user base. Users have an account page where they can set an image for their profile picture and as well as change usernames and passwords. Bloggle is responsive so it works great on different screen sizes. Go ahead and give it a try if you are interested! Here is a short preview. 
 
-1. Make sure you have git installed on your device, run the following command on the terminal:
+<img src='http://g.recordit.co/fJ1BMSH1FK.gif' title='Video Walkthrough' alt='Video Walkthrough' />
 
-```
-git --version
-```
 
-2. Clone the repo to a "local" directory (on your computer), 
+# How to contribute
 
-```
-git clone https://github.com/Ajaydip-Singh/blog_it_web_app.git
-```
 
-then change into the directory
+1. Clone the repo to a "local" directory (on your computer).
 
 ```
-cd blog_it_web_app
+git clone https://github.com/Ajaydip-Singh/Bloggle-Flask.git
 ```
 
-3. To make sure everything is up to date on your end, run
+then change into the directory.
 
 ```
-git pull
+cd Bloggle-Flask
 ```
 
-4. Always create a branch for any new task
+3. Create a branch for the new feature being contributed.
 
 ```
 git checkout -b [name-of-branch]
 ```
 
-5. If you are using Visual Studio Code to contribute, you can use
+4. After the feature has been implemented git push your branch and create a pull request. 
 
-```
-code .
-```
 
-and make your contributions in the branch you have created.
 
-6. Save all changes in Visual Studio Code, then run
-
-```
-git add .
-git status
-git commit -m "A clear message about contribution"
-git push
-```
 
 ## Run Virtual Environment
 
@@ -111,10 +93,7 @@ All environment variables are stored within the `.env` file and loaded with dote
 Start the server by running:
 
     $ export FLASK_ENV=development
-    $ export FLASK_APP=web
-    $ python3 -m flask run
+    $ python3 run.py
 
 
-# Preview of BLOGit
 
-<img src='http://g.recordit.co/Iv4wgC7Eiv.gif' title='Video Walkthrough' width='500' alt='Video Walkthrough' />
