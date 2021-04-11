@@ -37,6 +37,22 @@ h6 {
     margin-bottom: 20px;
 }
 
+.authenticate-forms {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
+
+.below-form {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
 .article-title {
     color: #444444;
 }

@@ -1,8 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <div class="content-section">
-        <form method="POST" action="">
+        <form method="POST" action="" class='authenticate-forms'>
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join today</legend>
@@ -72,11 +71,10 @@
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
         </form>
-        <div class="border-top pt-3">
+        <div class="border-top pt-3 below-form">
             <small class="text_muted">
                 Already have an account? <a class="ml-2" href="{{ url_for('users.login') }}">Sign in</a>
             </small>
         </div>
-    </div>
 
 {% endblock content %}
